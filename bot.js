@@ -60,5 +60,4 @@ client.setInterval(function() {
 	statsChannel.setName(`Next Splash: ${msToTime(RemaningTime(new Date()))}`)
 }, 30000);
 
-var auth = require('./auth.json');
 client.login(process.env.BOT_TOKEN);
