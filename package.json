@@ -1,0 +1,12 @@
+{
+  "name": "SplashTimer",
+  "version": "beta 1.0.0",
+  "description": "I count time between splashes",
+  "main": "index.js",
+  "author": "DavidCzPdy",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "discord.js": "^11.5.1",
+    "winston": "^3.2.1"
+  }
+}
