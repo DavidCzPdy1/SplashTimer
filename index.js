@@ -61,4 +61,4 @@ client.setInterval(function() {
 }, 30000);
 
 var auth = require('./auth.json');
-client.login(auth.token);
+client.login(process.env.BOT_TOKEN);
