@@ -37,12 +37,12 @@ client.on('ready', () => {
 
 const splashDates = {
 'Sun': 13,
-'Mon': 21,
-'Tue': 21,
-'Wed': 20,
-'Thu': 21,
-'Fri': 20,
-'Sat': 14,
+'Mon': 20,
+'Tue': 20,
+'Wed': 19,
+'Thu': 20,
+'Fri': 19,
+'Sat': 13,
 }
 
 const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
