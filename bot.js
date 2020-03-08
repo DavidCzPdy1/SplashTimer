@@ -1,5 +1,5 @@
-// show time to next splash
-
+// Show time to next splash
+// Todo - NOW 5 minutes afer splash, Add option 2x splash per day, 
 
 function msToTime(duration) {
   var milliseconds = parseInt((duration % 1000) / 100),
@@ -36,13 +36,13 @@ client.on('ready', () => {
 
 
 const splashDates = {
-'Sun': 13, 
-'Mon': 21, 
-'Tue': 21, 
-'Wed': 20, 
-'Thu': 21, 
-'Fri': 20, 
-'Sat': 14, 
+'Sun': 13,
+'Mon': 21,
+'Tue': 21,
+'Wed': 20,
+'Thu': 21,
+'Fri': 20,
+'Sat': 14,
 }
 
 const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
