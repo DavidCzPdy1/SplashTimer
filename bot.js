@@ -47,9 +47,6 @@ const splashDates = {
 
 const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
 
-// let now = new Date(Date.parse('07 Mar 2020 15:05:00'))
-// console.log(`Time: ${msToTime(RemaningTime(now))}`)
-// return
 
 
 
@@ -58,6 +55,6 @@ client.setInterval(function() {
 	let statsChannel = client.channels.get("684500101267325108"); //honza
 
 	statsChannel.setName(`Next Splash: ${msToTime(RemaningTime(new Date()))}`)
-}, 30000);
+}, 10000);
 
 client.login(process.env.BOT_TOKEN);
