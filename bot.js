@@ -2,7 +2,7 @@
 // Todo - NOW 5 minutes afer splash, Add option 2x splash per day, 
 
 function msToTime(duration) {
-  var milliseconds = parseInt((duration % 1000) / 100),
+    var milliseconds = parseInt((duration % 1000) / 100),
     seconds = Math.floor((duration / 1000) % 60),
     minutes = Math.floor((duration / (1000 * 60)) % 60),
     hours = Math.floor((duration / (1000 * 60 * 60)));
@@ -52,7 +52,6 @@ const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
 
 
 client.setInterval(function() {
-	//let statsChannel = client.channels.get("684474064412082226"); //ja
 	let statsChannel = client.channels.get("684500101267325108"); //honza
 
 	statsChannel.setName(`Next Splash: ${msToTime(RemaningTime(new Date()))}`)
