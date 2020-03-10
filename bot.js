@@ -12,7 +12,7 @@ function msToTime(duration) {
   minutes = (minutes < 10) ? "0" + minutes : minutes;
   seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-  return (hours * 60 + minutes) > 5 ? hours + "h " + minutes + "m " : "NOW" ;
+  return (hours * 60 + minutes) > 5 ? hours + "h " + minutes + "m " : "SOON" ;
 }
 
 function RemaningTime(now) {
