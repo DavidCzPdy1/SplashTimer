@@ -54,4 +54,26 @@ client.setInterval(function() {
 	statsChannel.setName(`Next Splash: ${msToTime(RemaningTime(new Date()))}`)
 }, 10000);
 
+client.on("message", (message) => {
+	if (message.channel.name == 'nevsimejte-si' && ! message.content.match(
+		/IGN:.*\nWant:.*\nHave:.*/i
+		)) {
+		message.author.send(`You have mistake in your message in <#692371503127461948>. Your previous message was:\n**${message.content} **\nPlease correct it this way:\nIGN: DavidCzPdy     *[shift+enter]*\nWant: AOTD      *[shift+enter]*\nHave: Coins\nVisit me/Dm me`)
+		message.delete();
+	}
+})
+
+
+//auction
+
+client.on("message", (message) => {
+	if (message.channel.name == 'auction' && ! message.content.match(
+		/Ah.*/i
+		)) {
+		message.author.send(`f`)
+		message.delete();
+	
+	}
+})
+
 client.login(process.env.BOT_TOKEN);
