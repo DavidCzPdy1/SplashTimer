@@ -58,7 +58,7 @@ client.on("message", (message) => {
 	if (message.channel.name == 'nevsimejte-si' && ! message.content.match(
 		/IGN:.*\nWant:.*\nHave:.*/i
 		)) {
-		message.author.send(`You have mistake in your message in <#692371503127461948>. Your previous message was:\n**${message.content} **\nPlease correct it this way:\nIGN: DavidCzPdy     *[shift+enter]*\nWant: AOTD      *[shift+enter]*\nHave: Coins\nVisit me/Dm me`)
+		message.author.send(`__You had mistake in your message in__ <#692371503127461948>. Your previous message was:\n**${message.content} **\nPlease correct it this way:\nIGN: DavidCzPdy     *[shift+enter]*\nWant: AOTD      *[shift+enter]*\nHave: Coins\nVisit me/Dm me`)
 		message.delete();
 	}
 })
@@ -71,6 +71,19 @@ client.on("message", (message) => {
 		/Ah.*/i
 		)) {
 		message.author.send(`f`)
+		message.delete();
+	
+	}
+})
+
+
+//rental
+
+client.on("message", (message) => {
+	if (message.channel.name == 'rental' && ! message.content.match(
+		/IGN:.*\nNeed:.*/i
+		)) {
+		message.author.send(`__You had mistake in your message in__ <#693108296843919452>. Your previous message was:\n**${message.content} **\nPlease correct it this way:\nIGN: [*nickname*]\nNeed: [*What you need*]		*[shift+enter]*\nBonus: (not required)		*[shift+enter]*\nDM me (not required)`)
 		message.delete();
 	
 	}
