@@ -53,8 +53,9 @@ client.setInterval(function() {
 	statsChannel.setName(`Next Splash: ${msToTime(RemaningTime(new Date()))}`)
 }, 10000);
 
+//trades
 client.on("message", (message) => {
-	if (message.channel.name == 'nevsimejte-si' && ! message.content.match(
+	if (message.channel.name == 'trades' && ! message.content.match(
 		/IGN:.*\nWant:.*\nHave:.*/i
 		)) {
 		message.author.send(`__You had mistake in your message in__ <#692371503127461948>. Your previous message was:\n**${message.content} **\nPlease correct it this way:\nIGN: DavidCzPdy     *[shift+enter]*\nWant: AOTD      *[shift+enter]*\nHave: Coins\nVisit me/Dm me`)
