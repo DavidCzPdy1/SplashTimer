@@ -1,5 +1,4 @@
-// Show time to next splash
-// Todo - NOW 5 minutes afer splash, Add option 2x splash per day, 
+// Show time to next splash - discord.gg/potions
 
 function msToTime(duration) {
     var milliseconds = parseInt((duration % 1000) / 100),
