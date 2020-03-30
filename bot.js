@@ -70,7 +70,7 @@ client.on("message", (message) => {
 	if (message.channel.name == 'auction' && ! message.content.match(
 		/Ah.*/i
 		)) {
-		message.author.send(`__You had mistake ni your message in <#692733839830679602>. You previous message was:\n**${message.content} **\nPlease correct it this way:\n/ah *[nickname]* *[AOTD]* *[10]hours* *[500]coins*`)
+		message.author.send(`__You had mistake ni your message in__ <#692733839830679602>. You previous message was:\n**${message.content} **\nPlease correct it this way:\n/ah *[nickname]* *[AOTD]* *[10hours]* *[500coins]*`)
 		message.delete();
 	
 	}
