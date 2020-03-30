@@ -92,7 +92,7 @@ client.on("message", (message) => {
 //reaction role
 
 var emojiname = ["yes","potion","stonks"];
-var rolename=["Member","Notice","moderator"];
+var rolename=["Member","Notice","Bot developer"];
 
 
 client.on('message', msg => {
