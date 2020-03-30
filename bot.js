@@ -58,7 +58,7 @@ client.on("message", (message) => {
 	if (message.channel.name == 'trades' && ! message.content.match(
 		/IGN:.*\nWant:.*\nHave:.*/i
 		)) {
-		message.author.send(`__You had mistake in your message in__ <#692371503127461948>. Your previous message was:\n**${message.content} **\nPlease correct it this way:\nIGN: [*nickname*]		*[shift+enter]*\nWant: [*What you want*]	*[shift+enter]*\nHave: Coins\nVisit me/Dm me`)
+		message.author.send(`__You had mistake in your message in__ <#693391520862175323>. Your previous message was:\n**${message.content} **\nPlease correct it this way:\nIGN: [*nickname*]		*[shift+enter]*\nWant: [*What you want*]	*[shift+enter]*\nHave: Coins\nVisit me/Dm me`)
 		message.delete();
 	}
 })
