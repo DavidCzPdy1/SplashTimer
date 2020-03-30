@@ -91,8 +91,8 @@ client.on("message", (message) => {
 
 //reaction role
 
-var emojiname = ["yes"];
-var rolename=["Member"];
+var emojiname = ["yes","potion"];
+var rolename=["Member","Notice"];
 
 
 client.on('message', msg => {
