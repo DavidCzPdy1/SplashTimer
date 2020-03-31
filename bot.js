@@ -96,18 +96,18 @@ var rolename=["Member","Notice"];
 
 
 client.on('message', msg => {
-	
+	if(msg.member.hasPermission('ADMINISTRATOR')) {
 		if(msg.content.startsWith("!reaction")){
 			if(!msg.channel.guild) return;
-			for(let n in emojiname){
-				var emoji =[msg.guild.emojis.find(r => r.name == emojiname[n])];
-				for(let i in emoji){
-					//console.log(emoji[i])
-					msg.react(emoji[i]);
+				for(let n in emojiname){
+					var emoji =[msg.guild.emojis.find(r => r.name == emojiname[n])];
+					for(let i in emoji){
+						//console.log(emoji[i])
+						msg.react(emoji[i]);
 				}
 			}
-		}
-		
+		}	
+	}
 });
 
 client.on("messageReactionAdd",(reaction,user)=>{
