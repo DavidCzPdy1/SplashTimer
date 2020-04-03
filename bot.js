@@ -97,7 +97,6 @@ var rolename=["Member","Notice"];
 
 
 client.on('message', msg => {
-	if(msg.member.hasPermission('MANAGE_ROLES')) {
 		if(msg.content.startsWith("!reaction")){
 			if(!msg.channel.guild) return;
 				for(let n in emojiname){
@@ -107,8 +106,7 @@ client.on('message', msg => {
 						msg.react(emoji[i]);
 				}
 			}
-		}	
-	}
+		}
 });
 
 client.on("messageReactionAdd",(reaction,user)=>{
