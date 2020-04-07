@@ -11,7 +11,7 @@ function msToTime(duration) {
   minutes = (minutes < 10) ? "0" + minutes : minutes;
   seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-  return (hours * 60 + minutes) > 30 ? hours + "h " + minutes + "m " : "SOON" ;
+  return (hours * 60 + minutes) > 1 ? hours + "h " + minutes + "m " : "SOON" ;
 }
 
 function RemaningTime(now) {
@@ -37,7 +37,7 @@ client.on('ready', () => {
 
 const splashDates = {
 'Sun': 12,
-'Mon': 19,
+'Mon': 18.5,
 'Tue': 19,
 'Wed': 18,
 'Thu': 19,
@@ -50,7 +50,7 @@ const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
 client.setInterval(function() {
 	let statsChannel = client.channels.get("684500101267325108"); //honza
 
-	statsChannel.setName(`Next Splash: ${msToTime(RemaningTime(new Date()))}`)
+	statsChannel.setName(`Planned Splash: ${msToTime(RemaningTime(new Date()))}`)
 }, 10000);
 
 //trades
