@@ -89,37 +89,6 @@ client.on("message", (message) => {
 })
 
 
-//reaction role
-
-var emojiname = ["yes"];
-var rolename=["Member"];
-
-
-
-client.on("messageReactionAdd",(reaction,user)=>{
-	if(!user) return;
-	if(user.bot)return;
-	if(!reaction.msg.channel.fetchMessage(700685395989364786)) return;
-	for(let n in emojiname){
-		if(reaction.emoji.name == emojiname[n]){
-			let role = reaction.message.guild.roles.find(r => r.name == rolename[n]);
-		reaction.message.guild.member(user).addRole(role).catch(console.error);
-		}
-	}
-});
-
-client.on("messageReactionRemove",(reaction,user)=>{
-	if(!user) return;
-	if(user.bot)return;
-	if(!reaction.msg.channel.fetchMessage(700685395989364786));
-	for(let n in emojiname){
-		if(reaction.emoji.name == emojiname[n]){
-			let role = reaction.message.guild.roles.find(r => r.name == rolename[n]);
-		reaction.message.guild.member(user).removeRole(role).catch(console.error);
-		}
-	}
-});
-
 
 
 
