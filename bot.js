@@ -91,30 +91,18 @@ client.on("message", (message) => {
 
 //reaction role
 
-var emojiname = ["yes","potion"];
-var rolename=["Member","Notice"];
+var emojiname = ["yes"];
+var rolename=["Member"];
 
 
-client.on('message', msg => {
-		if(msg.content.startsWith("!reaction")){
-			if(!msg.channel.guild) return;
-				for(let n in emojiname){
-					var emoji =[msg.guild.emojis.find(r => r.name == emojiname[n])];
-					for(let i in emoji){
-						//console.log(emoji[i])
-						msg.react(emoji[i]);
-				}
-			}
-		}
-});
 
 client.on("messageReactionAdd",(reaction,user)=>{
 	if(!user) return;
 	if(user.bot)return;
-	if(!reaction.message.channel.guild) return;
+	if(!reaction.msg.channel.fetchMessage(700685395989364786)) return;
 	for(let n in emojiname){
 		if(reaction.emoji.name == emojiname[n]){
-			let role = reaction.message.guild.roles.find(r => r.name == rolename[n]);          
+			let role = reaction.message.guild.roles.find(r => r.name == rolename[n]);
 		reaction.message.guild.member(user).addRole(role).catch(console.error);
 		}
 	}
@@ -123,10 +111,10 @@ client.on("messageReactionAdd",(reaction,user)=>{
 client.on("messageReactionRemove",(reaction,user)=>{
 	if(!user) return;
 	if(user.bot)return;
-	if(!reaction.message.channel.guild) return;
+	if(!reaction.msg.channel.fetchMessage(700685395989364786));
 	for(let n in emojiname){
 		if(reaction.emoji.name == emojiname[n]){
-			let role = reaction.message.guild.roles.find(r => r.name == rolename[n]);   
+			let role = reaction.message.guild.roles.find(r => r.name == rolename[n]);
 		reaction.message.guild.member(user).removeRole(role).catch(console.error);
 		}
 	}
