@@ -31,7 +31,6 @@ function RemaningTime(now) {
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on("ready", () =>{
-    client.user.setActivity("with depression", { type: "PLAYING ", game: "Minecraft" });
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
