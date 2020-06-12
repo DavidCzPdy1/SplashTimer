@@ -49,7 +49,7 @@ const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
 client.setInterval(function() {
 	let statsChannel = client.channels.get("684500101267325108"); //honza
 
-	statsChannel.setName(`Planned Splash: ${msToTime(RemaningTime(new Date()))}`)
+	statsChannel.setName(`Planned Splash in: ${msToTime(RemaningTime(new Date()))}`)
 }, 10000);
 
 //trades
