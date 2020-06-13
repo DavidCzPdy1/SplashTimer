@@ -49,7 +49,7 @@ const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
 client.setInterval(function() {
 	let statsChannel = client.channels.get("684500101267325108"); //honza
 
-	statsChannel.setName(`Planned Splash in: ${msToTime(RemaningTime(new Date()))}`)
+	statsChannel.setName(`Planned Splash: ${msToTime(RemaningTime(new Date()))}`)
 }, 10000);
 
 //trades
@@ -66,7 +66,7 @@ client.on("message", (message) => {
 //auction
 
 client.on("message", (message) => {
-	if (message.channel.name == 'auctions' && ! message.content.match(
+	if (message.channel.name == '📜auctions' && ! message.content.match(
 		/Ah.*/i
 		)) {
 		message.author.send(`__You had mistake in your message in__ <#692733839830679602>. You previous message was:\n**${message.content} **\nPlease correct it this way:\n/ah *[nickname]* *[AOTD]* *[10hours]* *[500coins]*`)
