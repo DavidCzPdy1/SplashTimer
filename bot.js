@@ -15,6 +15,7 @@ function msToTime(duration) {
 }
 
 function RemaningTime(now) {
+
 	let closestSplash = new Date(now)
 	if (now.getHours() < splashDates[days[now.getDay()]]) {
 		closestSplash.setHours(splashDates[days[now.getDay()]], 0, 0)
@@ -69,7 +70,7 @@ client.on("message", (message) => {
 	if (message.channel.name == '📜auctions' && ! message.content.match(
 		/Ah.*/i
 		)) {
-		message.author.send(`__You had mistake in your message in__ <#692733839830679602>. You previous message was:\n**${message.content} **\nPlease correct it this way:\n/ah *[nickname]* *[AOTD]* *[10hours]* *[500coins]*`)
+		message.author.send(`__You had mistake in your message in__ <#699326593989869691>. You previous message was:\n**${message.content} **\nPlease correct it this way:\n/ah *[nickname]* *[AOTD]* *[10hours]* *[500coins]*`)
 		message.delete();
 	
 	}
