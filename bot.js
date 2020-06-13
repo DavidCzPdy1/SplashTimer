@@ -76,17 +76,6 @@ client.on("message", (message) => {
 })
 
 
-//rental
-
-client.on("message", (message) => {
-	if (message.channel.name == 'rental' && ! message.content.match(
-		/IGN:.*\nNeed:.*/i
-		)) {
-		message.author.send(`__You had mistake in your message in__ <#693108296843919452>. Your previous message was:\n**${message.content} **\nPlease correct it this way:\nIGN: *[nickname]*		*[shift+enter]*\nNeed: *[What you need]*		*[shift+enter]*\nBonus: (not required)		*[shift+enter]*\nDM me (not required)`)
-		message.delete();
-	
-	}
-})
 
 
 
