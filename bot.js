@@ -66,7 +66,7 @@ client.on("message", (message) => {
 //auction
 
 client.on("message", (message) => {
-	if (message.channel.name == '📜auctions' && ! message.content.match(
+	if (message.channel.name == '💧splashes' && ! message.content.match(
 		/Ah.*/i
 		)) {
 		message.author.send(`__You had mistake in your message in__ <#692733839830679602>. You previous message was:\n**${message.content} **\nPlease correct it this way:\n/ah *[nickname]* *[AOTD]* *[10hours]* *[500coins]*`)
@@ -75,6 +75,17 @@ client.on("message", (message) => {
 	}
 })
 
+ 
+//other splashes
+client.on("message", (message) => {
+	if (message.channel.name == '💧splashes' && ! message.content.match(
+		*\@*\
+		)) {
+		message.author.send(`__You had mistake in your message in__ <#692733839830679602>. You previous message was:\n**${message.content} **\nPlease correct it this way:\n/ah *[nickname]* *[AOTD]* *[10hours]* *[500coins]*`)
+		message.delete();
+	
+	}
+})
 
 
 
