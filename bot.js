@@ -33,6 +33,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on("ready", () =>{
     console.log(`Logged in as ${client.user.tag}!`);
+	    client.user.setPresence({
+        status: "online",  //You can show online, idle....
+        game: {
+            name: "nice stories with Farmans",  //The message shown
+            type: "LISTENING" //PLAYING: WATCHING: LISTENING: STREAMING:
+        }
+    });
 });
 
 const splashDates = {
